@@ -83,7 +83,7 @@ This guarantees two things:
 
 Once a Layer is sealed, the Wafer is in a terminal state. No further Layers can be added unless the current holder explicitly declares a next holder. This is done by appending a new Holder entry that:
 - Includes the next holder’s public key and an holder identifier
-- Is sealed with an HMAC under the same key `K_i`, but with a domain-separated input to distinguish it from Layer sealing (e.g., "wafer/v0.1.0/holder").
+- Is sealed with an HMAC under the same key `K_i`, but with a domain-separated input to distinguish it from Layer sealing (e.g., "wafer/v0/holder").
 
 The newly named holder can now derive the next sealing key and append the next Layer. Without such a Holder entry, the Wafer remains valid for use, but it is no longer extensible.
 
